@@ -1,0 +1,3056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AXP Africa Limited | Digital Growth & Customer Acquisition Strategy — Mordi Valentine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-deep: #041936;
+      --navy: #062348;
+      --navy-royal: #0B3568;
+      --navy-accent: #154B8A;
+      --gold: #E5A000;
+      --gold-bright: #F5B81D;
+      --gold-soft: #FFF7E0;
+      --ice-bg: #F4F7FB;
+      --ice-soft: #E8EFF8;
+      --white: #FFFFFF;
+      --text-main: #091526;
+      --text-muted: #1E293B;
+      --border: rgba(6, 35, 72, 0.14);
+      --shadow-sm: 0 4px 16px rgba(4, 25, 54, 0.06);
+      --shadow-md: 0 14px 36px rgba(4, 25, 54, 0.1);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Fraunces', Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background: var(--ice-bg);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* Reading Progress Bar */
+    .progress-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(6, 35, 72, 0.1);
+      z-index: 1000;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--navy-royal), var(--gold));
+      transition: width 0.1s ease-out;
+    }
+
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 0.96rem;
+    }
+
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-logo-fallback {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy-royal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Executive Mode Toggle */
+    .mode-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1.5px solid var(--navy);
+      background: var(--white);
+      color: var(--navy);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-toggle:hover {
+      background: var(--ice-soft);
+    }
+
+    .mode-toggle.active {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .mode-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .btn-print {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-print:hover {
+      background: var(--gold-bright);
+      transform: translateY(-1px);
+    }
+
+    /* Layout Helpers */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(229, 160, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+      line-height: 1.18;
+      color: var(--navy-deep);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 740px;
+      margin-bottom: 34px;
+    }
+
+    /* Executive Mode Hiding */
+    body.exec-mode .deep-detail {
+      display: none !important;
+    }
+
+    body.exec-mode .exec-summary-only {
+      display: block !important;
+    }
+
+    .exec-summary-only {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .exec-banner {
+      display: none;
+      background: linear-gradient(90deg, var(--navy-deep), var(--navy-royal));
+      color: var(--white);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    body.exec-mode .exec-banner {
+      display: block;
+    }
+
+    /* Print-Only Elements Hidden on Screen */
+    .print-only {
+      display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 86% 14%, rgba(229, 160, 0, 0.22), transparent 44%),
+                  linear-gradient(145deg, var(--navy-deep) 0%, var(--navy) 58%, var(--navy-royal) 100%);
+      color: var(--white);
+      padding: 76px 0 72px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(245, 184, 29, 0.45);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #FFE399;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      line-height: 1.09;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span {
+      color: var(--gold-bright);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy-deep);
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: transform 0.2s, background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Interactive Value Chain Pills in Hero */
+    .chain-pills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chain-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chain-pill.active,
+    .chain-pill:hover {
+      background: var(--gold);
+      color: var(--navy-deep);
+      border-color: var(--gold);
+    }
+
+    .chain-arrow {
+      color: var(--gold-bright);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+    }
+
+    .hero-logo-banner {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-logo-banner img {
+      max-height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .hero-card-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FFE399;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stat-box {
+      background: rgba(4, 25, 54, 0.62);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-md);
+      padding: 14px;
+    }
+
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      line-height: 1;
+      color: var(--gold-bright);
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.83rem;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 600;
+    }
+
+    .chain-caption {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.88rem;
+      color: var(--white);
+      min-height: 54px;
+    }
+
+    /* Paradigm Shift Comparison + Objectives */
+    .shift-box {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 20px;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 38px;
+    }
+
+    .shift-col {
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+    }
+
+    .shift-old {
+      background: #F1F5F9;
+      border: 1.5px dashed rgba(6, 35, 72, 0.28);
+      color: var(--text-main);
+    }
+
+    .shift-new {
+      background: var(--ice-soft);
+      border: 1.5px solid var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .shift-label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+      display: block;
+      color: var(--navy);
+    }
+
+    .shift-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .obj-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+    }
+
+    .obj-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+
+    .obj-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .obj-card h3 {
+      font-size: 1.05rem;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .obj-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Section 3: 5-Pillar Interactive Workbench */
+    .pillars-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pillar-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .pillar-tab {
+      text-align: left;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--ice-bg);
+      cursor: pointer;
+      font-family: inherit;
+      color: var(--text-main);
+      transition: all 0.2s;
+    }
+
+    .pillar-tab:hover {
+      border-color: var(--navy-royal);
+    }
+
+    .pillar-tab.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-num {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-royal);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .pillar-tab.active .pillar-num {
+      color: var(--gold-bright);
+    }
+
+    .pillar-tab-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .pillar-panel {
+      background: var(--ice-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      animation: fadeSlide 0.25s ease-out;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pillar-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .pillar-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .pillar-obj {
+      color: var(--text-muted);
+      max-width: 720px;
+      font-size: 0.98rem;
+    }
+
+    .pillar-nav-btns {
+      display: flex;
+      gap: 8px;
+    }
+
+    .pillar-nav-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--navy);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .pillar-nav-btn:hover {
+      background: var(--ice-soft);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .tactic-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .tactic-card h4 {
+      font-size: 0.98rem;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tactic-tag {
+      font-size: 0.72rem;
+      background: var(--gold-soft);
+      color: var(--navy-deep);
+      border: 1px solid rgba(229, 160, 0, 0.45);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+
+    .tactic-card p, .tactic-card li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .tactic-card ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .tactic-card li + li {
+      margin-top: 5px;
+    }
+
+    .platform-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+      margin-bottom: 22px;
+    }
+
+    .platform-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--navy-royal);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .platform-card strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .platform-card span {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .outcome-banner {
+      background: linear-gradient(90deg, var(--navy-deep), var(--navy-royal));
+      color: var(--white);
+      border-radius: var(--radius-md);
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.94rem;
+    }
+
+    .outcome-badge {
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-weight: 800;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 5px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    /* Section 4: Interactive 6-Stage Funnel */
+    .funnel-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .funnel-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .funnel-stage-btn {
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--navy-deep);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.22s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .funnel-stage-btn:nth-child(1) { width: 100%; }
+    .funnel-stage-btn:nth-child(2) { width: 93%; }
+    .funnel-stage-btn:nth-child(3) { width: 86%; }
+    .funnel-stage-btn:nth-child(4) { width: 79%; }
+    .funnel-stage-btn:nth-child(5) { width: 72%; }
+    .funnel-stage-btn:nth-child(6) { width: 66%; }
+
+    .funnel-stage-btn:hover {
+      border-color: var(--gold);
+      transform: scale(1.015);
+    }
+
+    .funnel-stage-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      box-shadow: var(--shadow-md);
+    }
+
+    .funnel-stage-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .funnel-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--ice-soft);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .funnel-stage-btn.active .funnel-num {
+      background: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .funnel-stage-title {
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .funnel-detail-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .funnel-step-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-royal);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .funnel-detail-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--navy-deep);
+      margin-bottom: 12px;
+    }
+
+    .funnel-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 20px;
+    }
+
+    .funnel-chip {
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--ice-soft);
+      color: var(--navy);
+    }
+
+    .homeready-story {
+      background: var(--gold-soft);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 16px 18px;
+      margin-top: 20px;
+    }
+
+    .homeready-story strong {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+    }
+
+    .homeready-story p {
+      font-size: 0.91rem;
+      color: var(--text-main);
+    }
+
+    /* Section 5: KPIs & Reporting Command Center */
+    .kpi-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .filter-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--ice-bg);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-pill.active,
+    .filter-pill:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .kpi-card {
+      background: var(--ice-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .kpi-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .kpi-card h4 {
+      font-size: 1rem;
+      color: var(--navy-deep);
+    }
+
+    .kpi-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      background: var(--white);
+      color: var(--navy-royal);
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .kpi-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .kpi-tag {
+      font-size: 0.8rem;
+      background: var(--white);
+      color: var(--text-main);
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(6, 35, 72, 0.12);
+      font-weight: 600;
+    }
+
+    .reporting-bar {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 22px;
+      background: var(--navy-deep);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .cadence-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .cadence-btn {
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .cadence-btn.active {
+      background: var(--gold);
+      color: var(--navy-deep);
+      border-color: var(--gold);
+    }
+
+    .cadence-body {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    .stack-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .stack-box h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-bright);
+      margin-bottom: 12px;
+    }
+
+    .stack-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .stack-pill {
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 5px 11px;
+      border-radius: 8px;
+    }
+
+    .stack-note {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    /* Section 6: Interactive 90-Day Roadmap */
+    .roadmap-switcher {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .phase-btn {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phase-btn::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+    }
+
+    .phase-btn.active {
+      border-color: var(--navy);
+      box-shadow: var(--shadow-md);
+    }
+
+    .phase-btn.active::after {
+      background: linear-gradient(90deg, var(--navy), var(--gold));
+    }
+
+    .phase-days {
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-royal);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .phase-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--navy-deep);
+    }
+
+    .roadmap-panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .roadmap-panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .roadmap-panel-head h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--navy-deep);
+    }
+
+    .checklist-counter {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+      background: var(--gold-soft);
+      border: 1px solid rgba(229, 160, 0, 0.45);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    .roadmap-tasks {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      background: var(--ice-bg);
+      border: 1px solid rgba(6, 35, 72, 0.1);
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+    }
+
+    .task-item:hover {
+      border-color: var(--navy-royal);
+    }
+
+    .task-item.done {
+      background: var(--gold-soft);
+      border-color: var(--gold);
+    }
+
+    .task-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 2px solid var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--white);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .task-item.done .task-check {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .task-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* Section 7 & 8: Immediate AXP Opportunities & Business Impact */
+    .opps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+
+    .opp-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .opp-card.featured {
+      background: linear-gradient(155deg, var(--navy-deep), var(--navy-royal));
+      color: var(--white);
+      border-color: var(--navy);
+      border-top: 4px solid var(--gold);
+    }
+
+    .opp-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--ice-soft);
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .opp-card.featured .opp-badge {
+      background: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .opp-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      color: var(--navy-deep);
+    }
+
+    .opp-card.featured h3 {
+      color: var(--white);
+    }
+
+    .opp-card p {
+      font-size: 0.91rem;
+      color: var(--text-muted);
+    }
+
+    .opp-card.featured p {
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .impact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    .impact-pills {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .impact-pill {
+      background: var(--ice-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+
+    .impact-pill strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+    }
+
+    .impact-pill span {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .realism-note {
+      font-size: 0.86rem;
+      color: var(--text-main);
+      background: var(--ice-bg);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      border-left: 4px solid var(--gold);
+    }
+
+    /* Footer / Closing CTA */
+    .closing {
+      background: linear-gradient(145deg, var(--navy-deep), var(--navy-royal));
+      color: var(--white);
+      padding: 72px 0 52px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .closing-card {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+
+    .closing h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .closing p {
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 20px;
+    }
+
+    .closing-chain {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--gold-bright);
+    }
+
+    .presenter-box {
+      background: var(--white);
+      color: var(--text-main);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .presenter-logo-wrap {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .presenter-logo-wrap img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .presenter-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-royal);
+      margin-bottom: 4px;
+    }
+
+    .presenter-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+    }
+
+    .presenter-role {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--ice-bg);
+      border: 1px solid var(--border);
+      color: var(--navy-deep);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .contact-link:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold);
+    }
+
+    .footer-meta {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .funnel-layout,
+      .reporting-bar,
+      .closing-card {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .objectives-grid,
+      .opps-grid,
+      .impact-pills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shift-box,
+      .pillar-grid,
+      .platform-strip,
+      .roadmap-switcher,
+      .objectives-grid,
+      .opps-grid,
+      .impact-pills,
+      .pillar-tabs {
+        grid-template-columns: 1fr;
+      }
+
+      .shift-arrow {
+        margin: 0 auto;
+        transform: rotate(90deg);
+      }
+
+      .funnel-stage-btn {
+        width: 100% !important;
+      }
+
+      .btn-print {
+        display: none;
+      }
+    }
+
+    /* ============================================================
+       DEDICATED PRINT / SAVE-AS-PDF ENGINE
+       - Pure Black (#000000) & Deep Navy (#062348) high visibility
+       - Immune to unchecked "Background graphics" in browsers
+       - Zero page cut-offs across cards via block flow + break-inside: avoid
+       - Renders ALL 5 Pillars, 6 Funnel Stages, KPIs & 3 Roadmap Phases
+       ============================================================ */
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm 13mm 15mm 13mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 9.8pt !important;
+        line-height: 1.48 !important;
+      }
+
+      .navbar,
+      .progress-track,
+      .exec-banner,
+      .screen-only,
+      .hero-cta-row,
+      .chain-pills,
+      .pillar-nav-btns {
+        display: none !important;
+      }
+
+      .print-only {
+        display: block !important;
+      }
+
+      .deep-detail {
+        display: block !important;
+      }
+
+      .exec-summary-only {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      section, footer.closing {
+        padding: 16px 0 !important;
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        border: none !important;
+      }
+
+      /* Headings never orphaned at page bottom */
+      h1, h2, h3, h4, .section-kicker, .section-title, .section-lead {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+        color: #000000 !important;
+      }
+
+      .section-kicker {
+        background: #FFF7E0 !important;
+        color: #062348 !important;
+        border: 1px solid #062348 !important;
+        font-size: 7.5pt !important;
+        padding: 3px 9px !important;
+        margin-bottom: 6px !important;
+      }
+
+      .section-title {
+        font-size: 16.5pt !important;
+        color: #062348 !important;
+        margin-bottom: 6px !important;
+      }
+
+      .section-lead {
+        font-size: 9.6pt !important;
+        color: #000000 !important;
+        margin-bottom: 14px !important;
+        max-width: 100% !important;
+      }
+
+      /* Print Cover / Hero Banner */
+      .hero {
+        padding: 0 0 14px 0 !important;
+        border-bottom: 2.5px solid #062348 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .hero-grid {
+        display: block !important;
+      }
+
+      .print-cover-bar {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #E5A000;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+      }
+
+      .print-cover-bar img {
+        height: 46px;
+        width: auto;
+      }
+
+      .print-cover-meta {
+        text-align: right;
+        font-size: 8.8pt;
+        color: #000000 !important;
+      }
+
+      .print-cover-meta strong {
+        display: block;
+        color: #062348 !important;
+        font-size: 10pt;
+      }
+
+      .hero-eyebrow {
+        background: #FFF7E0 !important;
+        color: #062348 !important;
+        border: 1px solid #062348 !important;
+        font-size: 8pt !important;
+        margin-bottom: 8px !important;
+      }
+
+      .hero h1 {
+        font-size: 22pt !important;
+        color: #062348 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .hero h1 span {
+        color: #B87900 !important;
+      }
+
+      .hero-sub {
+        color: #000000 !important;
+        font-size: 10pt !important;
+        max-width: 100% !important;
+        margin-bottom: 12px !important;
+      }
+
+      .hero-card {
+        background: #F4F7FB !important;
+        border: 1.5px solid #062348 !important;
+        padding: 12px 14px !important;
+        border-radius: 10px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .hero-logo-banner {
+        display: none !important;
+      }
+
+      .hero-card-title {
+        color: #062348 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .stat-grid {
+        display: block !important;
+      }
+
+      .stat-box {
+        display: inline-block !important;
+        width: 23.5% !important;
+        vertical-align: top !important;
+        margin-right: 1% !important;
+        background: #FFFFFF !important;
+        border: 1px solid #062348 !important;
+        padding: 8px 10px !important;
+      }
+
+      .stat-num {
+        font-size: 15pt !important;
+        color: #062348 !important;
+      }
+
+      .stat-label {
+        font-size: 8pt !important;
+        color: #000000 !important;
+      }
+
+      .chain-caption {
+        border-top: 1px solid #062348 !important;
+        color: #000000 !important;
+        min-height: 0 !important;
+        margin-top: 10px !important;
+        padding-top: 8px !important;
+        font-size: 8.8pt !important;
+      }
+
+      /* Prevent cut-offs: convert multi-row CSS grids to reliable block/inline-block layouts */
+      .shift-box,
+      .objectives-grid,
+      .opps-grid,
+      .impact-pills,
+      .kpi-grid,
+      .pillar-grid,
+      .platform-strip,
+      .closing-card {
+        display: block !important;
+      }
+
+      .shift-box {
+        border: 1.5px solid #062348 !important;
+        padding: 12px !important;
+        margin-bottom: 14px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .shift-col {
+        display: inline-block !important;
+        width: 47% !important;
+        vertical-align: top !important;
+        padding: 10px !important;
+        font-size: 8.8pt !important;
+        color: #000000 !important;
+      }
+
+      .shift-old {
+        background: #F8FAFC !important;
+        border: 1px solid #000000 !important;
+      }
+
+      .shift-new {
+        background: #FFF7E0 !important;
+        border: 1.5px solid #062348 !important;
+      }
+
+      .shift-label {
+        color: #062348 !important;
+      }
+
+      .shift-arrow {
+        display: inline-block !important;
+        width: 4% !important;
+        height: auto !important;
+        background: transparent !important;
+        color: #062348 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        padding-top: 20px !important;
+      }
+
+      /* 2-Column Print Cards with Strict No-Cut-Off */
+      .obj-card,
+      .opp-card,
+      .kpi-card {
+        display: inline-block !important;
+        width: 48.5% !important;
+        vertical-align: top !important;
+        margin: 0 1% 10px 0 !important;
+        padding: 12px !important;
+        border: 1px solid #062348 !important;
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .opp-card.featured {
+        background: #FFF7E0 !important;
+        border: 1.5px solid #062348 !important;
+        color: #000000 !important;
+      }
+
+      .opp-card.featured h3,
+      .opp-card.featured p,
+      .obj-card h3,
+      .obj-card p,
+      .opp-card h3,
+      .opp-card p,
+      .kpi-card h4 {
+        color: #000000 !important;
+      }
+
+      .opp-badge,
+      .kpi-badge,
+      .tactic-tag {
+        background: #F4F7FB !important;
+        color: #062348 !important;
+        border: 1px solid #062348 !important;
+      }
+
+      .kpi-tag {
+        color: #000000 !important;
+        border: 1px solid #334155 !important;
+        font-size: 7.8pt !important;
+        padding: 2px 6px !important;
+      }
+
+      /* Print Expanded Pillars */
+      .print-pillar-block {
+        border: 1.5px solid #062348 !important;
+        border-radius: 10px !important;
+        padding: 14px !important;
+        margin-bottom: 14px !important;
+        background: #FFFFFF !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .print-pillar-block h3 {
+        font-family: var(--font-serif);
+        font-size: 12.5pt !important;
+        color: #062348 !important;
+        margin-bottom: 4px !important;
+      }
+
+      .print-pillar-obj {
+        font-size: 9pt !important;
+        color: #000000 !important;
+        margin-bottom: 10px !important;
+        padding-bottom: 6px !important;
+        border-bottom: 1px solid #CBD5E1 !important;
+      }
+
+      .print-tactic-item {
+        display: inline-block !important;
+        width: 48.5% !important;
+        vertical-align: top !important;
+        margin: 0 1% 8px 0 !important;
+        padding: 9px 10px !important;
+        border: 1px solid #CBD5E1 !important;
+        border-radius: 8px !important;
+        background: #F8FAFC !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .print-tactic-item h4 {
+        font-size: 9.2pt !important;
+        color: #062348 !important;
+        margin-bottom: 4px !important;
+      }
+
+      .print-tactic-item li {
+        font-size: 8.5pt !important;
+        color: #000000 !important;
+        margin-left: 14px !important;
+      }
+
+      .print-platform-row {
+        margin: 6px 0 8px 0 !important;
+      }
+
+      .print-platform-box {
+        display: inline-block !important;
+        width: 31.8% !important;
+        vertical-align: top !important;
+        margin-right: 1% !important;
+        padding: 8px !important;
+        border: 1px solid #062348 !important;
+        border-top: 3px solid #062348 !important;
+        border-radius: 6px !important;
+        font-size: 8.3pt !important;
+        color: #000000 !important;
+      }
+
+      .print-outcome {
+        background: #FFF7E0 !important;
+        border: 1px solid #062348 !important;
+        padding: 8px 10px !important;
+        border-radius: 6px !important;
+        font-size: 8.8pt !important;
+        color: #000000 !important;
+        margin-top: 6px !important;
+      }
+
+      /* Print Expanded Funnel */
+      .print-funnel-card {
+        border: 1px solid #062348 !important;
+        border-left: 4px solid #E5A000 !important;
+        border-radius: 8px !important;
+        padding: 10px 12px !important;
+        margin-bottom: 9px !important;
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .print-funnel-card h4 {
+        font-size: 10.5pt !important;
+        color: #062348 !important;
+        margin-bottom: 3px !important;
+      }
+
+      .print-funnel-card p {
+        font-size: 8.8pt !important;
+        color: #000000 !important;
+        margin-bottom: 4px !important;
+      }
+
+      /* Print Reporting Bar & Roadmap */
+      .reporting-bar {
+        display: block !important;
+        background: #F4F7FB !important;
+        color: #000000 !important;
+        border: 1.5px solid #062348 !important;
+        padding: 14px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .print-cadence-item {
+        font-size: 8.8pt !important;
+        color: #000000 !important;
+        margin-bottom: 6px !important;
+      }
+
+      .stack-box {
+        background: #FFFFFF !important;
+        border: 1px solid #062348 !important;
+        padding: 10px !important;
+        margin-top: 8px !important;
+      }
+
+      .stack-box h4, .stack-note {
+        color: #000000 !important;
+      }
+
+      .stack-pill {
+        background: #E8EFF8 !important;
+        color: #062348 !important;
+        border: 1px solid #062348 !important;
+      }
+
+      .print-phase-card {
+        border: 1.5px solid #062348 !important;
+        border-radius: 8px !important;
+        padding: 12px 14px !important;
+        margin-bottom: 10px !important;
+        background: #FFFFFF !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .print-phase-card h4 {
+        font-size: 11pt !important;
+        color: #062348 !important;
+        margin-bottom: 6px !important;
+      }
+
+      .print-phase-card ul {
+        padding-left: 16px !important;
+      }
+
+      .print-phase-card li {
+        font-size: 8.8pt !important;
+        color: #000000 !important;
+        margin-bottom: 2px !important;
+      }
+
+      /* Impact Box & Closing Card (No awkward cut-offs between pages 8 & 9!) */
+      .impact-box {
+        border: 1.5px solid #062348 !important;
+        padding: 14px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .impact-pill {
+        display: inline-block !important;
+        width: 31.8% !important;
+        vertical-align: top !important;
+        margin: 0 1% 8px 0 !important;
+        padding: 8px !important;
+        border: 1px solid #062348 !important;
+        background: #F8FAFC !important;
+      }
+
+      .impact-pill strong, .impact-pill span, .realism-note {
+        color: #000000 !important;
+      }
+
+      .closing-card {
+        border: 2px solid #062348 !important;
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        padding: 16px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .closing h2, .closing p {
+        color: #000000 !important;
+      }
+
+      .closing-chain {
+        color: #062348 !important;
+        margin-bottom: 12px !important;
+      }
+
+      .presenter-box {
+        border: 1.5px solid #062348 !important;
+        padding: 14px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .presenter-role, .contact-link {
+        color: #000000 !important;
+        border: 1px solid #062348 !important;
+      }
+
+      .footer-meta {
+        color: #000000 !important;
+        margin-top: 12px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="progress-track">
+    <div class="progress-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Executive Mode Indicator -->
+  <div class="exec-banner">
+    60-Second Executive Summary Mode Active — Tactical deep-dives are tucked away for fast scanning.
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="axp-logo.png" alt="AXP Africa Limited" class="brand-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+        <span class="brand-logo-fallback">
+          <svg width="34" height="28" viewBox="0 0 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22 22L32 6L42 22H22Z" stroke="#062348" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M12 44L23 26L35 44" stroke="#E5A000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 44L41 26L52 35L42 44" stroke="#062348" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>AXP AFRICA LIMITED</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#pillars">5 Pillars</a></li>
+        <li><a href="#funnel">Funnel</a></li>
+        <li><a href="#kpis">KPIs</a></li>
+        <li><a href="#roadmap">90-Day Plan</a></li>
+        <li><a href="#opportunities">AXP Quick Wins</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mode-toggle" id="execToggle" title="Switch between Full Strategy and 60-Second Executive Summary">
+          <span class="mode-dot"></span>
+          <span id="execToggleLabel">60s Exec Mode</span>
+        </button>
+        <button class="btn-print" onclick="window.print()">Save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <!-- Print-Only Cover Header -->
+      <div class="print-only print-cover-bar">
+        <img src="axp-logo.png" alt="AXP Africa Limited" onerror="this.style.display='none';" />
+        <div class="print-cover-meta">
+          <strong>Prepared by Mordi Valentine</strong>
+          <span>Phone: 09065710820 &bull; WhatsApp: 08158238621</span>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow">Proposed Digital Marketing Framework &bull; AXP Africa Limited</div>
+          <h1>From digital presence to <span>measurable digital growth.</span></h1>
+          <p class="hero-sub">
+            Building visibility. Generating demand. Converting prospects. Driving growth. A connected acquisition ecosystem uniting AXP’s website, search, paid media, social, content, and email into one pipeline.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#pillars" class="btn-primary">Explore the 5 Pillars ↓</a>
+            <a href="#opportunities" class="btn-ghost">See Immediate AXP Wins</a>
+          </div>
+
+          <!-- Interactive Chain -->
+          <div class="chain-pills" id="heroChain">
+            <button class="chain-pill active" data-stage="visibility">VISIBILITY</button>
+            <span class="chain-arrow">→</span>
+            <button class="chain-pill" data-stage="engagement">ENGAGEMENT</button>
+            <span class="chain-arrow">→</span>
+            <button class="chain-pill" data-stage="acquisition">ACQUISITION</button>
+            <span class="chain-arrow">→</span>
+            <button class="chain-pill" data-stage="conversion">CONVERSION</button>
+            <span class="chain-arrow">→</span>
+            <button class="chain-pill" data-stage="retention">RETENTION</button>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-logo-banner">
+            <img src="axp-logo.png" alt="AXP Africa Limited" onerror="this.parentElement.style.display='none';" />
+          </div>
+          <div class="hero-card-title">Framework At A Glance</div>
+          <div class="stat-grid">
+            <div class="stat-box">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Connected Growth Pillars</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">6</div>
+              <div class="stat-label">Integrated Funnel Stages</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">90</div>
+              <div class="stat-label">Day Phased Launch Plan</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">6</div>
+              <div class="stat-label">Immediate AXP Opportunities</div>
+            </div>
+          </div>
+          <div class="chain-caption" id="chainCaption">
+            <strong>Visibility:</strong> Expand AXP’s reach across Google search, social feeds, and high-intent digital touchpoints.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1 & 2: Executive Summary & Strategic Objectives -->
+  <section id="objectives">
+    <div class="container">
+      <span class="section-kicker">01 &bull; Executive Vision &amp; Objectives</span>
+      <h2 class="section-title">One connected customer acquisition engine—not isolated channels.</h2>
+      <p class="section-lead">
+        Having an online presence is no longer enough. Rather than treating every platform as a silo, each digital touchpoint is deployed for its specific role in moving prospects from discovery to qualified business outcomes.
+      </p>
+
+      <div class="shift-box">
+        <div class="shift-col shift-old">
+          <span class="shift-label">Old Way: Disconnected Platforms</span>
+          Static brochure website, ad-hoc social posts, un-nurtured enquiries, and vanity metrics like likes and impressions.
+        </div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-col shift-new">
+          <span class="shift-label">Proposed AXP System</span>
+          Conversion-led website + SEO/SEM demand capture + full-funnel social &amp; paid ads + automated email nurturing + closed-loop CRM measurement.
+        </div>
+      </div>
+
+      <div class="objectives-grid">
+        <div class="obj-card">
+          <div class="obj-icon">01</div>
+          <h3>Increase Brand Visibility</h3>
+          <p>Improve AXP’s prominence across search engines, social platforms, and relevant digital environments.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">02</div>
+          <h3>Attract Qualified Traffic</h3>
+          <p>Reach audiences whose needs, interests, and commercial intent align with AXP’s offerings.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">03</div>
+          <h3>Generate Qualified Leads</h3>
+          <p>Encourage prospects to enquire, register interest, book consultations, or take meaningful next steps.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">04</div>
+          <h3>Improve Conversion Performance</h3>
+          <p>Reduce friction, sharpen messaging, upgrade landing pages, and clarify calls to action.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">05</div>
+          <h3>Build a Sustainable Pipeline</h3>
+          <p>Continuously attract prospects and nurture leads who aren’t ready to decide on day one.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">06</div>
+          <h3>Establish Measurable Performance</h3>
+          <p>Track which channels produce real engagement, qualified leads, conversions, and commercial value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive 5-Pillar Growth Workbench -->
+  <section class="pillars-section" id="pillars">
+    <div class="container">
+      <span class="section-kicker">02 &bull; Digital Growth Strategy</span>
+      <h2 class="section-title">Explore the 5 Core Pillars</h2>
+      <p class="section-lead">
+        Each pillar plays a coordinated role in turning AXP’s digital footprint into qualified enquiries and measurable growth.
+      </p>
+
+      <!-- Interactive Screen Tabs -->
+      <div class="screen-only">
+        <div class="pillar-tabs" role="tablist">
+          <button class="pillar-tab active" data-pillar="0">
+            <span class="pillar-num">Pillar 01</span>
+            <span class="pillar-tab-name">Website &amp; Organic Growth</span>
+          </button>
+          <button class="pillar-tab" data-pillar="1">
+            <span class="pillar-num">Pillar 02</span>
+            <span class="pillar-tab-name">SEO &amp; SEM (Google Ads)</span>
+          </button>
+          <button class="pillar-tab" data-pillar="2">
+            <span class="pillar-num">Pillar 03</span>
+            <span class="pillar-tab-name">Social Media &amp; Positioning</span>
+          </button>
+          <button class="pillar-tab" data-pillar="3">
+            <span class="pillar-num">Pillar 04</span>
+            <span class="pillar-tab-name">Paid Social Acquisition</span>
+          </button>
+          <button class="pillar-tab" data-pillar="4">
+            <span class="pillar-num">Pillar 05</span>
+            <span class="pillar-tab-name">Email &amp; Lead Nurturing</span>
+          </button>
+        </div>
+        <div id="pillarDisplay"></div>
+      </div>
+
+      <!-- Print-Only Complete 5 Pillars -->
+      <div class="print-only" id="printPillarsAll"></div>
+    </div>
+  </section>
+
+  <!-- Section 4: Integrated Customer Acquisition Funnel -->
+  <section id="funnel">
+    <div class="container">
+      <span class="section-kicker">03 &bull; Integrated Acquisition Funnel</span>
+      <h2 class="section-title">How every touchpoint works together</h2>
+      <p class="section-lead">
+        A prospect might discover AXP on Google, explore a guide, enquire, receive follow-up emails, see a retargeting ad, and convert.
+      </p>
+
+      <!-- Screen Interactive Funnel -->
+      <div class="funnel-layout screen-only">
+        <div class="funnel-stack" id="funnelButtons">
+          <button class="funnel-stage-btn active" data-funnel="0">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">1</span>
+              <span class="funnel-stage-title">Discovery</span>
+            </span>
+            <span>→</span>
+          </button>
+          <button class="funnel-stage-btn" data-funnel="1">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">2</span>
+              <span class="funnel-stage-title">Interest &amp; Consideration</span>
+            </span>
+            <span>→</span>
+          </button>
+          <button class="funnel-stage-btn" data-funnel="2">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">3</span>
+              <span class="funnel-stage-title">Lead Capture</span>
+            </span>
+            <span>→</span>
+          </button>
+          <button class="funnel-stage-btn" data-funnel="3">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">4</span>
+              <span class="funnel-stage-title">Nurture &amp; Qualification</span>
+            </span>
+            <span>→</span>
+          </button>
+          <button class="funnel-stage-btn" data-funnel="4">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">5</span>
+              <span class="funnel-stage-title">Conversion</span>
+            </span>
+            <span>→</span>
+          </button>
+          <button class="funnel-stage-btn" data-funnel="5">
+            <span class="funnel-stage-left">
+              <span class="funnel-num">6</span>
+              <span class="funnel-stage-title">Retention &amp; Advocacy</span>
+            </span>
+            <span>★</span>
+          </button>
+        </div>
+
+        <div class="funnel-detail-card" id="funnelDetail"></div>
+      </div>
+
+      <!-- Print-Only Complete 6 Funnel Stages -->
+      <div class="print-only" id="printFunnelAll"></div>
+    </div>
+  </section>
+
+  <!-- Section 5: Measurement, KPIs & Reporting -->
+  <section class="kpi-section" id="kpis">
+    <div class="container">
+      <span class="section-kicker">04 &bull; Measurement &amp; Accountability</span>
+      <h2 class="section-title">Beyond likes and impressions: Tracking commercial value</h2>
+      <p class="section-lead">
+        The goal isn’t just measuring lead volume—it’s knowing which channels produce quality prospects and which leads actually become customers.
+      </p>
+
+      <div class="filter-pills screen-only" id="kpiFilters">
+        <button class="filter-pill active" data-filter="all">All Touchpoints</button>
+        <button class="filter-pill" data-filter="website">Website</button>
+        <button class="filter-pill" data-filter="seo">SEO</button>
+        <button class="filter-pill" data-filter="google">Google Ads</button>
+        <button class="filter-pill" data-filter="social">Social Media</button>
+        <button class="filter-pill" data-filter="meta">Meta Ads</button>
+        <button class="filter-pill" data-filter="email">Email</button>
+        <button class="filter-pill" data-filter="overall">Overall Acquisition</button>
+      </div>
+
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <div class="reporting-bar">
+        <div class="screen-only">
+          <div class="cadence-tabs">
+            <button class="cadence-btn active" data-cadence="weekly">Weekly Monitoring</button>
+            <button class="cadence-btn" data-cadence="monthly">Monthly Report</button>
+            <button class="cadence-btn" data-cadence="quarterly">Quarterly Review</button>
+          </div>
+          <p class="cadence-body" id="cadenceText"></p>
+        </div>
+
+        <!-- Print-Only All 3 Reporting Cadences -->
+        <div class="print-only" id="printCadenceAll"></div>
+
+        <div class="stack-box">
+          <h4>Analytics &amp; Attribution Stack</h4>
+          <div class="stack-pills">
+            <span class="stack-pill">GA4</span>
+            <span class="stack-pill">Google Search Console</span>
+            <span class="stack-pill">Google Ads Tracking</span>
+            <span class="stack-pill">Meta Pixel / CAPI</span>
+            <span class="stack-pill">CRM Integration</span>
+          </div>
+          <p class="stack-note">Implemented where systems permit, subject to user consent and privacy requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: 90-Day Implementation Roadmap -->
+  <section id="roadmap">
+    <div class="container">
+      <span class="section-kicker">05 &bull; Phased Execution Plan</span>
+      <h2 class="section-title">Proposed 90-Day Implementation Roadmap</h2>
+      <p class="section-lead">
+        Phased to build a clean baseline first, deploy structured campaigns second, and scale what converts third.
+      </p>
+
+      <div class="screen-only">
+        <div class="roadmap-switcher">
+          <button class="phase-btn active" data-phase="0">
+            <span class="phase-days">Days 1–30</span>
+            <span class="phase-name">Audit &amp; Foundation</span>
+          </button>
+          <button class="phase-btn" data-phase="1">
+            <span class="phase-days">Days 31–60</span>
+            <span class="phase-name">Deploy &amp; Acquire</span>
+          </button>
+          <button class="phase-btn" data-phase="2">
+            <span class="phase-days">Days 61–90</span>
+            <span class="phase-name">Optimise &amp; Scale</span>
+          </button>
+        </div>
+        <div class="roadmap-panel" id="roadmapPanel"></div>
+      </div>
+
+      <!-- Print-Only All 3 Roadmap Phases -->
+      <div class="print-only" id="printRoadmapAll"></div>
+    </div>
+  </section>
+
+  <!-- Section 7 & 8: Immediate Opportunities & Expected Impact -->
+  <section class="pillars-section" id="opportunities">
+    <div class="container">
+      <span class="section-kicker">06 &bull; Tailored Growth Levers</span>
+      <h2 class="section-title">Six Immediate Opportunities for AXP</h2>
+      <p class="section-lead">
+        High-leverage initiatives designed specifically around AXP’s assets, prospective homebuyers, and commercial goals.
+      </p>
+
+      <div class="opps-grid">
+        <div class="opp-card featured">
+          <div>
+            <span class="opp-badge">Flagship Opportunity</span>
+            <h3>Build a HomeReady™ Acquisition Funnel</h3>
+            <p>Use educational campaigns to attract aspiring homeowners, guide them through readiness content, capture interest, and nurture them smoothly toward relevant next steps.</p>
+          </div>
+        </div>
+        <div class="opp-card">
+          <div>
+            <span class="opp-badge">Organic Engine</span>
+            <h3>Turn the Knowledge Centre into Traffic</h3>
+            <p>Publish search-focused topic clusters answering prospective homebuyers’ real questions on homeownership, mortgages, affordability, financial readiness, and housing opportunities.</p>
+          </div>
+        </div>
+        <div class="opp-card">
+          <div>
+            <span class="opp-badge">Conversion Focus</span>
+            <h3>Dedicated Opportunity Pathways</h3>
+            <p>Give each property or homeownership opportunity its own tailored strategy, audience, landing page, creative, enquiry mechanism, and follow-up pathway.</p>
+          </div>
+        </div>
+        <div class="opp-card">
+          <div>
+            <span class="opp-badge">Paid Media</span>
+            <h3>Paid Ads Beyond Simple Awareness</h3>
+            <p>Deploy Meta and Google campaigns across awareness, traffic, lead generation, retargeting, and conversion—measuring lead quality and progression, not reach alone.</p>
+          </div>
+        </div>
+        <div class="opp-card">
+          <div>
+            <span class="opp-badge">Owned Asset</span>
+            <h3>Build Email as a Business Asset</h3>
+            <p>Capture interest through resources, newsletters, and enquiries. Segment contacts and nurture them continuously to reduce long-term reliance on paid ads.</p>
+          </div>
+        </div>
+        <div class="opp-card">
+          <div>
+            <span class="opp-badge">Alignment</span>
+            <h3>Sales-to-Marketing Feedback Loop</h3>
+            <p>Partner closely with sales and business development to assess lead quality, conversion rates, reasons for non-conversion, and optimisation opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--navy-deep);">Expected Business Impact</h3>
+        <div class="impact-pills">
+          <div class="impact-pill">
+            <strong>Greater Visibility</strong>
+            <span>Stronger presence across search, social, and key audiences.</span>
+          </div>
+          <div class="impact-pill">
+            <strong>Qualified Prospects</strong>
+            <span>Attract audiences aligned with AXP’s commercial goals.</span>
+          </div>
+          <div class="impact-pill">
+            <strong>Better Conversion</strong>
+            <span>Smoother journey from discovery to qualified opportunity.</span>
+          </div>
+          <div class="impact-pill">
+            <strong>Measurable Decisions</strong>
+            <span>Budgets guided by real performance data and insights.</span>
+          </div>
+          <div class="impact-pill">
+            <strong>Compounding Growth</strong>
+            <span>Organic visibility and nurturing that build over time.</span>
+          </div>
+        </div>
+        <p class="realism-note">
+          <strong>Grounded Expectations:</strong> These are intended strategic outcomes, not guaranteed results. Actual performance depends on baseline health, product-market fit, campaign budget, conversion infrastructure, sales follow-up, and market competitiveness.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9 & 10: Closing & Presenter Card -->
+  <footer class="closing">
+    <div class="container">
+      <div class="closing-card">
+        <div>
+          <span class="section-kicker" style="background: rgba(245, 184, 29, 0.2); color: #FFE399; border-color: rgba(245, 184, 29, 0.5);">07 &bull; Why This Approach</span>
+          <h2>Strategy, creativity, execution, and continuous optimisation.</h2>
+          <p>
+            Digital marketing shouldn’t operate in isolation from sales, business development, or customer experience. My goal is to ensure every digital touchpoint has a purpose, every campaign has a measurable objective, and every marketing activity contributes to AXP’s tangible growth.
+          </p>
+          <div class="closing-chain">
+            VISIBILITY → ENGAGEMENT → ACQUISITION → CONVERSION → RETENTION
+          </div>
+        </div>
+
+        <div class="presenter-box">
+          <div class="presenter-logo-wrap">
+            <img src="axp-logo.png" alt="AXP Africa Limited" onerror="this.parentElement.style.display='none';" />
+          </div>
+          <div class="presenter-kicker">Prepared &amp; Presented By</div>
+          <h3>Mordi Valentine</h3>
+          <div class="presenter-role">Digital Growth &amp; Marketing Strategist</div>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:+2349065710820">
+              <span>Phone Call</span>
+              <span>09065710820 →</span>
+            </a>
+            <a class="contact-link" href="https://wa.me/2348158238621" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <span>08158238621 →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        AXP Africa Limited &bull; Digital Growth &amp; Customer Acquisition Strategy &bull; Presented by Mordi Valentine
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      document.getElementById('progressBar').style.width = `${scrolled}%`;
+    });
+
+    // 2. 60-Second Executive Mode Toggle
+    const execToggle = document.getElementById('execToggle');
+    const execLabel = document.getElementById('execToggleLabel');
+    execToggle.addEventListener('click', () => {
+      document.body.classList.toggle('exec-mode');
+      const isExec = document.body.classList.contains('exec-mode');
+      execToggle.classList.toggle('active', isExec);
+      execLabel.textContent = isExec ? 'Full Strategy Mode' : '60s Exec Mode';
+    });
+
+    // 3. Hero Interactive Chain
+    const chainDescriptions = {
+      visibility: '<strong>Visibility:</strong> Expand AXP’s reach across Google search, social feeds, and high-intent digital touchpoints.',
+      engagement: '<strong>Engagement:</strong> Build trust and educate aspiring homebuyers through articles, explainers, and interactive content.',
+      acquisition: '<strong>Acquisition:</strong> Capture identifiable leads via dedicated landing pages, lead forms, downloads, and WhatsApp.',
+      conversion: '<strong>Conversion:</strong> Route qualified, sales-ready prospects smoothly to AXP’s business team for consultation and onboarding.',
+      retention: '<strong>Retention:</strong> Nurture long-term relationships through helpful updates, education, and referral advocacy.'
+    };
+
+    document.querySelectorAll('.chain-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.chain-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('chainCaption').innerHTML = chainDescriptions[btn.dataset.stage];
+      });
+    });
+
+    // 4. 5-Pillar Data (Shared by Interactive Screen & Complete PDF)
+    const pillarsData = [
+      {
+        title: 'Pillar 1: Website Utilisation & Organic Growth',
+        objective: 'Transform the AXP website into a high-performing acquisition, education, and conversion engine—not merely a digital brochure.',
+        outcome: 'A website that attracts relevant visitors, educates prospects, captures interest, and actively drives customer acquisition.',
+        cards: [
+          {
+            title: 'Conversion Rate Optimisation (CRO)',
+            tag: 'UX & Friction Removal',
+            points: [
+              'Audit UX, navigation, mobile speed, and high-traffic/low-converting pages.',
+              'Clarify value propositions, calls to action, and enquiry form flows.'
+            ]
+          },
+          {
+            title: 'Strategic Landing Pages',
+            tag: 'Relevance',
+            points: [
+              'Build dedicated pages per offering, audience segment, and campaign.',
+              'Route paid and social traffic to matching pages—never defaulting to the homepage.'
+            ]
+          },
+          {
+            title: 'Educational Content Hub',
+            tag: 'Authority',
+            points: [
+              'Publish decision guides, FAQs, product/service explainers, and market reports.',
+              'Showcase case studies, customer success stories, and downloadable resources.'
+            ]
+          },
+          {
+            title: 'Multi-Channel Lead Capture',
+            tag: 'Conversion',
+            points: [
+              'Optimise consultation requests, contact forms, resource downloads, and newsletters.',
+              'Enable seamless WhatsApp engagement and interest registrations where appropriate.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Pillar 2: Search Engine Optimisation (SEO) & SEM',
+        objective: 'Capture existing market demand from prospects actively searching for solutions, properties, or opportunities relevant to AXP.',
+        outcome: 'Stronger search visibility, capture of high-intent demand, increased qualified traffic, and measurable search-generated enquiries.',
+        cards: [
+          {
+            title: 'Keyword & Search Intent Mapping',
+            tag: 'SEO Strategy',
+            points: [
+              'Target customer pain points, industry terms, informational vs. commercial queries, and local intent.',
+              'Benchmark competitor search visibility to spot underserved opportunities.'
+            ]
+          },
+          {
+            title: 'On-Page & Technical SEO',
+            tag: 'Site Health',
+            points: [
+              'Optimise titles, meta descriptions, headings, internal links, alt text, URLs, and schema.',
+              'Fix indexation, Core Web Vitals, mobile usability, sitemaps, broken links, and redirects.'
+            ]
+          },
+          {
+            title: 'Content & Authority Building',
+            tag: 'Long-Term Moat',
+            points: [
+              'Publish helpful articles answering real buyer questions and guiding users to AXP services.',
+              'Earn credible backlinks via industry publications, partnerships, and digital PR.'
+            ]
+          },
+          {
+            title: 'Google Ads (SEM) Demand Capture',
+            tag: 'Immediate Intent',
+            points: [
+              'Run brand-protection campaigns, high-intent commercial keywords, and location targeting.',
+              'Continuously refine negative keywords, ad copy, landing-page CVR, CPL, and lead quality.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Pillar 3: Social Media Marketing & Brand Positioning',
+        objective: 'Build a credible, engaging digital presence that attracts, educates, builds authority, sparks conversations, and supports acquisition.',
+        outcome: 'A consistent digital brand presence, stronger audience trust, and social activity that measurably supports lead generation.',
+        cards: [
+          {
+            title: 'Five Structured Content Pillars',
+            tag: 'Editorial Mix',
+            points: [
+              'Education & Industry Insights (trends, FAQs, myth-vs-fact) + Product/Service Awareness.',
+              'Trust & Credibility (testimonials, milestones, team expertise) + Community Polls & Conversion Campaigns.'
+            ]
+          },
+          {
+            title: 'Planned Calendar & Commercial Alignment',
+            tag: 'Execution',
+            points: [
+              'Structured content calendar synced with launches, commercial priorities, and seasonal opportunities.',
+              'Measured by reach, profile visits, referral traffic, and enquiries—never vanity metrics alone.'
+            ]
+          }
+        ],
+        platforms: [
+          { name: 'LinkedIn', role: 'Corporate positioning, thought leadership, industry insights, professional audiences, partnerships, and credibility.' },
+          { name: 'Instagram', role: 'Visual storytelling, Reels, educational carousels, brand awareness, product storytelling, and audience engagement.' },
+          { name: 'Facebook', role: 'Broad reach, community building, educational content, campaign distribution, lead generation, and retargeting.' }
+        ]
+      },
+      {
+        title: 'Pillar 4: Paid Social Advertising & Customer Acquisition',
+        objective: 'Accelerate brand awareness, reach targeted audience segments, generate qualified leads, and improve acquisition efficiency.',
+        outcome: 'Expanded exposure, targeted prospect acquisition, consistent lead flow, and improved return on ad spend.',
+        cards: [
+          {
+            title: 'Precision Audience Segmentation',
+            tag: 'Targeting',
+            points: [
+              'Segment by demographics, location, interests, behaviours, and professional/lifestyle traits.',
+              'Build custom & lookalike audiences from website visitors, social engagers, and permitted prospect data.'
+            ]
+          },
+          {
+            title: '4-Stage Campaign Architecture',
+            tag: 'Full-Funnel',
+            points: [
+              'Awareness (short videos, storytelling) → Engagement (educational carousels & video).',
+              'Lead Gen (Meta lead forms & conversion landing pages) → Retargeting incomplete form starters & visitors.'
+            ]
+          },
+          {
+            title: 'Structured Creative & Funnel Testing',
+            tag: 'Experimentation',
+            points: [
+              'Systematically test hooks, formats, offers, headlines, CTAs, and landing-page experiences.',
+              'Identify winning creative-audience combinations driving high-quality leads.'
+            ]
+          },
+          {
+            title: 'Commercial Performance Monitoring',
+            tag: 'Optimisation',
+            points: [
+              'Track CPM, CTR, CPC, landing-page conversion, CPL, lead quality, and CAC.',
+              'Shift budgets dynamically toward campaigns delivering real customer conversions.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Pillar 5: Email Marketing, Lead Nurturing & Retention',
+        objective: 'Turn captured interest into qualified opportunities while keeping prospects engaged until they are ready to decide.',
+        outcome: 'Higher conversion of existing leads, stronger customer relationships, and an owned channel reducing reliance on paid ads.',
+        cards: [
+          {
+            title: 'Smart Lead Segmentation',
+            tag: 'Relevance',
+            points: [
+              'Organise contacts by acquisition source, interest/product category, customer status, and journey stage.',
+              'Personalise messaging based on past enquiries, engagement level, and campaign interactions.'
+            ]
+          },
+          {
+            title: 'Five Automated Lifecycle Journeys',
+            tag: 'Automation',
+            points: [
+              'Welcome Sequence → Lead Nurturing (education & objection-handling) → Enquiry Follow-Up.',
+              'Re-engagement for quiet prospects + Customer Relationship campaigns for updates and referrals.'
+            ]
+          },
+          {
+            title: 'Value-Driven Content Mix',
+            tag: 'Trust',
+            points: [
+              'Share industry insights, guides, product updates, success stories, and event invitations.',
+              'Offer personalised opportunity recommendations where consented data permits.'
+            ]
+          },
+          {
+            title: 'Meaningful Metric Tracking',
+            tag: 'Analytics',
+            points: [
+              'Monitor deliverability, bounce rate, click rate, website traffic, enquiries, conversions, and unsubscribes.',
+              'Interpret open rates cautiously due to modern privacy-related tracking protections.'
+            ]
+          }
+        ]
+      }
+    ];
+
+    function renderPillar(idx) {
+      const p = pillarsData[idx];
+      document.querySelectorAll('.pillar-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+
+      const cardsHtml = p.cards.map(c => `
+        <div class="tactic-card">
+          <h4>${c.title} <span class="tactic-tag">${c.tag}</span></h4>
+          <ul class="deep-detail">
+            ${c.points.map(pt => `<li>${pt}</li>`).join('')}
+          </ul>
+          <p class="exec-summary-only">${c.points[0]}</p>
+        </div>
+      `).join('');
+
+      const platformsHtml = p.platforms ? `
+        <div class="platform-strip">
+          ${p.platforms.map(pl => `
+            <div class="platform-card">
+              <strong>${pl.name}</strong>
+              <span>${pl.role}</span>
+            </div>
+          `).join('')}
+        </div>
+      ` : '';
+
+      document.getElementById('pillarDisplay').innerHTML = `
+        <div class="pillar-panel">
+          <div class="pillar-header">
+            <div>
+              <h3>${p.title}</h3>
+              <p class="pillar-obj">${p.objective}</p>
+            </div>
+            <div class="pillar-nav-btns">
+              <button class="pillar-nav-btn" onclick="renderPillar(${(idx + 4) % 5})">← Prev</button>
+              <button class="pillar-nav-btn" onclick="renderPillar(${(idx + 1) % 5})">Next →</button>
+            </div>
+          </div>
+          <div class="pillar-grid">${cardsHtml}</div>
+          ${platformsHtml}
+          <div class="outcome-banner">
+            <span class="outcome-badge">Expected Outcome</span>
+            <span>${p.outcome}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    document.querySelectorAll('.pillar-tab').forEach(tab => {
+      tab.addEventListener('click', () => renderPillar(Number(tab.dataset.pillar)));
+    });
+    renderPillar(0);
+
+    // Populate Complete Print-Only Pillars
+    document.getElementById('printPillarsAll').innerHTML = pillarsData.map(p => `
+      <div class="print-pillar-block">
+        <h3>${p.title}</h3>
+        <p class="print-pillar-obj"><strong>Objective:</strong> ${p.objective}</p>
+        <div>
+          ${p.cards.map(c => `
+            <div class="print-tactic-item">
+              <h4>${c.title}</h4>
+              <ul>${c.points.map(pt => `<li>${pt}</li>`).join('')}</ul>
+            </div>
+          `).join('')}
+        </div>
+        ${p.platforms ? `
+          <div class="print-platform-row">
+            ${p.platforms.map(pl => `
+              <div class="print-platform-box">
+                <strong>${pl.name}:</strong> ${pl.role}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+        <div class="print-outcome"><strong>Expected Outcome:</strong> ${p.outcome}</div>
+      </div>
+    `).join('');
+
+    // 5. 6-Stage Funnel Data
+    const funnelData = [
+      {
+        stage: 'Stage 1 of 6 • Top of Funnel',
+        title: 'Discovery',
+        objective: 'Build broad awareness and attract relevant, high-potential audiences into AXP’s ecosystem.',
+        channels: ['Google Search & SEO Content', 'Paid Search (SEM)', 'Social Media & Meta Ads', 'Industry Content & Partnerships'],
+        story: 'An aspiring homeowner searches Google for mortgage readiness tips and lands on an AXP Knowledge Centre guide.'
+      },
+      {
+        stage: 'Stage 2 of 6 • Education',
+        title: 'Interest & Consideration',
+        objective: 'Build trust, communicate AXP’s clear value proposition, and encourage deeper exploration.',
+        channels: ['Website Product/Service Pages', 'Educational Guides & FAQs', 'Social Carousels & Video', 'Email Newsletters'],
+        story: 'They browse AXP’s dedicated opportunity pages, watch an Instagram explainer Reel, and understand how HomeReady™ works.'
+      },
+      {
+        stage: 'Stage 3 of 6 • Capture',
+        title: 'Lead Capture',
+        objective: 'Convert anonymous website visitors and social engagers into identifiable, reachable prospects.',
+        channels: ['Enquiry Forms', 'Consultation Requests', 'Resource Downloads', 'WhatsApp Conversations & Registrations'],
+        story: 'They download an affordability checklist or submit a quick HomeReady™ interest form via a conversion-focused landing page.'
+      },
+      {
+        stage: 'Stage 4 of 6 • Readiness',
+        title: 'Nurture & Qualification',
+        objective: 'Increase buyer readiness, answer objections, and move prospects smoothly toward qualified opportunities.',
+        channels: ['Automated Email Sequences', 'Meta & Google Remarketing', 'Targeted Follow-Up', 'Personalised Recommendations'],
+        story: 'Over the next two weeks, helpful emails answer common homeownership questions while retargeting ads keep AXP top of mind.'
+      },
+      {
+        stage: 'Stage 5 of 6 • Business Outcome',
+        title: 'Conversion',
+        objective: 'Route marketing-qualified prospects cleanly to AXP’s sales/business team for consultation, transaction, or onboarding.',
+        channels: ['CRM Lead Routing', 'Sales Consultation', 'Direct Follow-Up', 'Customer Onboarding'],
+        story: 'Ready to move forward, the prospect books a consultation with full context logged in the CRM for AXP’s sales team.'
+      },
+      {
+        stage: 'Stage 6 of 6 • Compounding Growth',
+        title: 'Retention & Advocacy',
+        objective: 'Strengthen ongoing relationships, deepen customer loyalty, and generate organic referrals.',
+        channels: ['Customer Education', 'Relationship Campaigns', 'Relevant Updates', 'Referral Programmes'],
+        story: 'As a satisfied AXP customer, they receive ongoing value updates and confidently refer peers starting their own journey.'
+      }
+    ];
+
+    function renderFunnel(idx) {
+      const f = funnelData[idx];
+      document.querySelectorAll('.funnel-stage-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+      document.getElementById('funnelDetail').innerHTML = `
+        <span class="funnel-step-tag">${f.stage}</span>
+        <h3>${f.title}</h3>
+        <p style="color: var(--text-muted); font-size: 0.98rem;"><strong>Objective:</strong> ${f.objective}</p>
+        <div class="funnel-chips">
+          ${f.channels.map(ch => `<span class="funnel-chip">${ch}</span>`).join('')}
+        </div>
+        <div class="homeready-story">
+          <strong>In Practice — HomeReady™ Prospect Journey</strong>
+          <p>${f.story}</p>
+        </div>
+      `;
+    }
+
+    document.querySelectorAll('.funnel-stage-btn').forEach(btn => {
+      btn.addEventListener('click', () => renderFunnel(Number(btn.dataset.funnel)));
+    });
+    renderFunnel(0);
+
+    // Populate Complete Print-Only Funnel
+    document.getElementById('printFunnelAll').innerHTML = funnelData.map((f, idx) => `
+      <div class="print-funnel-card">
+        <h4>Stage ${idx + 1}: ${f.title}</h4>
+        <p><strong>Objective:</strong> ${f.objective}</p>
+        <p><strong>Touchpoints:</strong> ${f.channels.join(' • ')}</p>
+        <p><strong>HomeReady™ Example:</strong> ${f.story}</p>
+      </div>
+    `).join('');
+
+    // 6. KPIs & Reporting Cadence
+    const kpiData = [
+      { key: 'website', name: 'Website', badge: 'Conversion', metrics: ['Sessions', 'Engaged Sessions', 'Conversion Rate', 'Enquiry Rate', 'Landing-Page CVR'] },
+      { key: 'seo', name: 'SEO', badge: 'Organic', metrics: ['Organic Traffic', 'Keyword Rankings', 'Impressions', 'Clicks', 'Organic Leads'] },
+      { key: 'google', name: 'Google Ads', badge: 'Paid Search', metrics: ['CTR', 'CPC', 'Conversions', 'Cost Per Lead', 'Qualified Leads'] },
+      { key: 'social', name: 'Social Media', badge: 'Brand & Trust', metrics: ['Reach', 'Engagement', 'Profile Visits', 'Referral Traffic', 'Enquiries'] },
+      { key: 'meta', name: 'Meta Ads', badge: 'Paid Social', metrics: ['CPM', 'CTR', 'CPC', 'CPL', 'Lead Quality & CVR'] },
+      { key: 'email', name: 'Email Marketing', badge: 'Owned Channel', metrics: ['Click Rate', 'Website Traffic', 'Leads', 'Conversion Rate', 'Unsubscribe Rate'] },
+      { key: 'overall', name: 'Overall Acquisition', badge: 'Commercial ROI', metrics: ['Qualified Leads', 'Lead-to-Customer Rate', 'CAC', 'Channel Contribution', 'Attributable Revenue'] }
+    ];
+
+    function renderKPIs(filter) {
+      const filtered = filter === 'all' ? kpiData : kpiData.filter(k => k.key === filter);
+      document.getElementById('kpiGrid').innerHTML = filtered.map(k => `
+        <div class="kpi-card">
+          <div class="kpi-card-head">
+            <h4>${k.name}</h4>
+            <span class="kpi-badge">${k.badge}</span>
+          </div>
+          <div class="kpi-tags">
+            ${k.metrics.map(m => `<span class="kpi-tag">${m}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.querySelectorAll('#kpiFilters .filter-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('#kpiFilters .filter-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        renderKPIs(pill.dataset.filter);
+      });
+    });
+    renderKPIs('all');
+
+    const cadenceCopy = {
+      weekly: '<strong>Weekly Monitoring:</strong> Track live campaign pacing, budget utilisation, traffic, lead generation, underperforming ads, and immediate tactical optimisations.',
+      monthly: '<strong>Monthly Report:</strong> Review channel performance, audience insights, lead volume vs. quality, ad spend, conversions, key wins, challenges, and next-month actions.',
+      quarterly: '<strong>Quarterly Review:</strong> Evaluate macro growth trends, channel effectiveness, CAC, conversion bottlenecks, content ROI, budget reallocation, and strategic shifts.'
+    };
+
+    function renderCadence(type) {
+      document.getElementById('cadenceText').innerHTML = cadenceCopy[type];
+    }
+
+    document.querySelectorAll('.cadence-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cadence-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderCadence(btn.dataset.cadence);
+      });
+    });
+    renderCadence('weekly');
+
+    // Populate Print-Only All Cadences
+    document.getElementById('printCadenceAll').innerHTML = `
+      <div class="print-cadence-item">${cadenceCopy.weekly}</div>
+      <div class="print-cadence-item">${cadenceCopy.monthly}</div>
+      <div class="print-cadence-item">${cadenceCopy.quarterly}</div>
+    `;
+
+    // 7. Interactive 90-Day Roadmap
+    const phasesData = [
+      {
+        title: 'Phase 1 (Days 1–30): Audit & Foundation',
+        tasks: [
+          'Website UX and conversion rate audit',
+          'SEO technical audit & keyword intent research',
+          'Competitor visibility & positioning analysis',
+          'Social media channel & content audit',
+          'Audience segmentation & messaging alignment',
+          'GA4, Search Console, Pixel & CRM tracking review',
+          'Paid campaign architecture & budget planning',
+          'Content calendar & Knowledge Centre topic map',
+          'Lead capture forms & CRM routing review'
+        ]
+      },
+      {
+        title: 'Phase 2 (Days 31–60): Deploy & Acquire',
+        tasks: [
+          'Implement priority on-page & technical SEO fixes',
+          'Launch dedicated landing pages for core offerings',
+          'Publish initial Knowledge Centre & educational articles',
+          'Roll out structured LinkedIn, Instagram & Facebook campaigns',
+          'Launch Google Ads brand & high-intent search campaigns',
+          'Launch Meta Ads awareness, lead gen & retargeting',
+          'Configure email segmentation & automated nurture sequences'
+        ]
+      },
+      {
+        title: 'Phase 3 (Days 61–90): Optimise & Scale',
+        tasks: [
+          'Deep-dive campaign & channel performance analysis',
+          'A/B test creatives, audiences, headlines & offers',
+          'Expand high-performing SEO content clusters',
+          'Refine multi-touch retargeting sequences',
+          'Evaluate lead quality & sales conversion feedback',
+          'Optimise landing pages & email nurture click rates',
+          'Deliver 90-day impact report & Q2 scaling roadmap'
+        ]
+      }
+    ];
+
+    const completedTasks = new Set();
+
+    function renderPhase(idx) {
+      const p = phasesData[idx];
+      document.querySelectorAll('.phase-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+
+      const doneCount = p.tasks.filter((_, tIdx) => completedTasks.has(`${idx}-${tIdx}`)).length;
+
+      document.getElementById('roadmapPanel').innerHTML = `
+        <div class="roadmap-panel-head">
+          <h3>${p.title}</h3>
+          <span class="checklist-counter">${doneCount} / ${p.tasks.length} Milestones Reviewed</span>
+        </div>
+        <div class="roadmap-tasks">
+          ${p.tasks.map((task, tIdx) => {
+            const key = `${idx}-${tIdx}`;
+            const isDone = completedTasks.has(key);
+            return `
+              <div class="task-item ${isDone ? 'done' : ''}" onclick="toggleTask(${idx}, ${tIdx})">
+                <span class="task-check">${isDone ? '✓' : ''}</span>
+                <span class="task-text">${task}</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    window.toggleTask = function(phaseIdx, taskIdx) {
+      const key = `${phaseIdx}-${taskIdx}`;
+      if (completedTasks.has(key)) {
+        completedTasks.delete(key);
+      } else {
+        completedTasks.add(key);
+      }
+      renderPhase(phaseIdx);
+    };
+
+    document.querySelectorAll('.phase-btn').forEach(btn => {
+      btn.addEventListener('click', () => renderPhase(Number(btn.dataset.phase)));
+    });
+    renderPhase(0);
+
+    // Populate Complete Print-Only Roadmap
+    document.getElementById('printRoadmapAll').innerHTML = phasesData.map(p => `
+      <div class="print-phase-card">
+        <h4>${p.title}</h4>
+        <ul>
+          ${p.tasks.map(t => `<li>${t}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
+
+    // Ensure "All Touchpoints" filter is active right before printing so all KPIs print
+    window.addEventListener('beforeprint', () => {
+      renderKPIs('all');
+    });
+  </script>
+</body>
+</html>
